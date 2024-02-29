@@ -496,7 +496,7 @@
 
                 if (imageName || videoName) {
                     image.setAttribute("src", `michael/photos/${folderName}/${videoName ? videoName : imageName}.jpeg`);
-                    image.setAttribute("class", videoName ? "hidden" : "");
+                    image.setAttribute("class", videoName ? "hidden" : "img");
                     image.setAttribute("height", height);
                     div.appendChild(image);
                 }
@@ -510,7 +510,7 @@
                     // video.setAttribute("controls", "false");
                     video.setAttribute("src", `michael/photos/${folderName}/${videoName}.MP4`);
                     video.setAttribute("height", height);
-                    // video.setAttribute("class", "");
+                    video.setAttribute("class", "video");
                     video.addEventListener('ended', function (e) {
                         if (image != null) {
                             image.classList.remove('hidden');
