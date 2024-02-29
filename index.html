@@ -63,6 +63,10 @@
             data-image-name="image6" data-height="1000" data-rotate-x="0" data-rotate-y="0">
         </div>
 
+        <div id="step1.7" class="step" data-x="1400" data-y="-2000" data-z="800" data-scale="1" data-folder="2018-09"
+            data-image-name="tech-crunch" data-height="1000" data-rotate-x="0" data-rotate-y="0">
+        </div>
+
         <!--<div id="2019-10">-->
 
         <div id="step2" class="step" data-x="5000" data-y="0" data-z="5000" data-scale="3" data-rotate-y="0">
@@ -498,12 +502,15 @@
                 }
 
                 if (videoName != null) {
-                    video.setAttribute("autoplay", "");
+                    // video.setAttribute("autoplay", "");
+                    video.playsinline = true;
+                    video.setAttribute('playsinline', "");
                     video.setAttribute("muted", "");
+                    video.muted = true;
                     // video.setAttribute("controls", "false");
                     video.setAttribute("src", `michael/photos/${folderName}/${videoName}.MP4`);
                     video.setAttribute("height", height);
-                    video.setAttribute("class", "");
+                    // video.setAttribute("class", "");
                     video.addEventListener('ended', function (e) {
                         if (image != null) {
                             image.classList.remove('hidden');
