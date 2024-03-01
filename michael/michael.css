@@ -724,3 +724,7 @@ a:focus {
     display: none;
     opacity: 0;
 }
+
+small {
+    opacity: .50;
+}
